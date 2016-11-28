@@ -4,7 +4,7 @@ import {HeroDetailComponent} from './hero-detail.component';
 /*export class Hero {
   id :number;
   name : string;
-}*/
+}
 
 const HEROES: Hero[] = [
   {id: 10, name:'Devil'},
@@ -18,7 +18,8 @@ const HEROES: Hero[] = [
   { id: 18, name: 'Dr IQ' },
   { id: 19, name: 'Magma' },
   { id: 20, name: 'Tornado' }
-  ];
+  ];*/
+
 
 @Component({
   selector: 'my-app',
@@ -81,9 +82,12 @@ const HEROES: Hero[] = [
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`]
+`
 
+]
+providers:[HeroService],
 })
+constructor(private heroService: HeroService) {}
 export class AppComponent { 
     title='Tour of heroes';
     selectedHero :Hero;
@@ -96,5 +100,6 @@ export class AppComponent {
   }; */
 
     
-    heroes = HEROES;
+    heroes = HERO[];
 }
+
